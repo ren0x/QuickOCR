@@ -1,6 +1,8 @@
-<img src="./logo/quick_ocr_logo.svg" width="120px" alt="QuickOCR Logo">
+<img src="logo/quick_ocr_logo_dark.svg" width="120px" alt="QuickOCR Logo">
+<img src="logo/quick_ocr_logo_white.svg" width="120px" alt="QuickOCR Logo">
 
 # QuickOCR
+
 A simple OCR tool implemented in Python using tesseract that allows you to copy text from a selected area of the screen to the clipboard.
 
 ## Prerequisites
@@ -17,3 +19,5 @@ You need to give the script permission to access the screen. You can do this by 
 ## Note
 It may be necessary to install `tkinter` on your system. For example, on Ubuntu you can do this with `sudo apt install tk`.
 The default language is English. If you want to use another language, you can change it in the `main.py` file (`LANG='<your_language>'`).
+
+*The logo was created with DALL-E by OpenAI*
