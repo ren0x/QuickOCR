@@ -4,7 +4,7 @@
 A simple OCR tool implemented in Python using tesseract that allows you to copy text from a selected area of the screen to the clipboard.
 
 ## Prerequisites
-`pip3 install pyperclip pynput pytesseract tkinter pynput`
+`pip3 install pyperclip pynput pytesseract tk pynput`
 
 ## Installation
 I suggest to store the project files in `~/bin/quick-ocr/`.
