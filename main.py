@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from QuickOCR import LanguageSelection, AreaSelection
 import pyperclip
 LANG = "english"  # default language

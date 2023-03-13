@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from tkinter import *
 import pytesseract
 from pynput.mouse import Listener
@@ -25,7 +26,9 @@ class LanguageSelection:
         self._lang_selection_window.geometry('200x50')  # set window size
 
         # set icon
-        self._lang_selection_window.iconphoto(False, PhotoImage(file='logo/quick_ocr_logo.png'))
+        # get current dir
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self._lang_selection_window.iconphoto(False, PhotoImage(file=current_dir+'/logo/quick_ocr_logo.png'))
 
         # create a dropdown menu
         self._language_drop_down = StringVar()
