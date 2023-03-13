@@ -18,17 +18,19 @@ class LanguageSelection:
         constructor
         :param lang: language
         """
+        self.runOCR = False
         self._lang = lang[0:3]  # set language
         # create instance
         self._lang_selection_window = Tk()
         self._lang_selection_window.title("Quick OCR")  # add a title
         self._lang_selection_window.resizable(False, False)  # disable resizing the GUI by passing in False/False
         self._lang_selection_window.geometry('200x50')  # set window size
+        # program should be in center of screen
 
+        self._lang_selection_window.eval('tk::PlaceWindow . center')
         # set icon
-        # get current dir
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        self._lang_selection_window.iconphoto(False, PhotoImage(file=current_dir+'/logo/quick_ocr_logo.png'))
+        self._lang_selection_window.iconphoto(False, PhotoImage(file=current_dir + '/logo/quick_ocr_logo.png'))
 
         # create a dropdown menu
         self._language_drop_down = StringVar()
@@ -67,6 +69,7 @@ class LanguageSelection:
 
     def btn_click(self):
         """event listener for button click"""
+        self.runOCR = True
         self._lang_selection_window.destroy()
 
 
@@ -138,7 +141,6 @@ class AreaSelection:
     # Start and End mouse position
     def on_move(self, x, y):
         if self.draw_selection_area:
-
             # draw rectangle on canvas as mouse moves and remove alpha from selection area
             self.canvas.delete("all")  # Remove previous rectangle
             self.canvas.create_rectangle(

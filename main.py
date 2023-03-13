@@ -6,15 +6,18 @@ LANG = "english"  # default language
 
 def main():
 
-    # create instance
-    quick_ocr = LanguageSelection(LANG)
-    quick_ocr.mainloop()
+    # create instance and start GUI
+    selection_window = LanguageSelection(LANG)
+    selection_window.mainloop()
 
-    area_selection = AreaSelection(quick_ocr.get_lang())
-    area_selection.mainloop()
+    if selection_window.runOCR:
 
-    # copy text to clipboard
-    pyperclip.copy(area_selection.get_text())
+        # create instance and start GUI
+        area_selection = AreaSelection(selection_window.get_lang())
+        area_selection.mainloop()
+
+        # copy text to clipboard
+        pyperclip.copy(area_selection.get_text())
 
 
 if __name__ == '__main__':

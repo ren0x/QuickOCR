@@ -15,4 +15,5 @@ Then you can assign a shortcut in the settings as follows: `~/bin/quick-ocr/main
 You need to give the script permission to access the screen. You can do this by going to `System Preferences > Security & Privacy > Privacy > Accessibility` and adding the script to the list.
 
 ## Note
-It may be necessary to install tkinter on your system. For example, on Ubuntu you can do this with `sudo apt install tk`.
+It may be necessary to install `tkinter` on your system. For example, on Ubuntu you can do this with `sudo apt install tk`.
+The default language is English. If you want to use another language, you can change it in the `main.py` file (`LANG='<your_language>'`).
